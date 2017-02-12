@@ -2,7 +2,7 @@
 LIBS = 
 
 # Language features (C99 etc.)
-#CFLAGS += -std=c99 -D_DEFAULT_SOURCE
+CFLAGS += -std=c99 -D_DEFAULT_SOURCE
 
 # Warning and error settings
 #CFLAGS += -Wall -Wextra
@@ -12,8 +12,8 @@ LIBS =
 #CFLAGS += -g
 
 ### File lists
-BINS = bit_search_tree
-OBJS = bit_search_tree.o
+BINS = tree str2bin
+OBJS = bit_search_tree.o str2bin.o tree.o
 
 
 ### Phony targets all/clean
@@ -28,7 +28,11 @@ clean:
 ### Build rules
 
 # Be sure to link in the library
-$(BINS): $(OBJS) $(LIBS)
+#$(BINS): $(OBJS) $(LIBS)
+str2bin: str2bin.o
+tree: bit_search_tree.o tree.o
 
 # Add header file dependencies
 bit_search_tree.o: bit_search_tree.h
+str2bin.o: bit.h
+tree.o: bit.h
