@@ -6,7 +6,7 @@ I dunno, I was: bored, had a stupid idea, and wanted some more practice with C (
 ## What does it do?
 *to be updated*
 
-Indexes data in a binary search tree based the sequence of its bits.
+Indexes data in a binary search tree based on the sequence of its bits.
 
 ## How do I build it?
 ```
