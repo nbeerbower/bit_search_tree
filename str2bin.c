@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 	
 	for (int i = 0; i < strlen(string); i++) {
 		for (int j = 0; j < 8; j++) {
-			printf("%i", bit_at(((byte_t *) string)[i], j) ? 1 : 0);
+			printf("%i", bit_at(((byte_t *) string)[i], j));
 		}
 	}
 	printf("\n");
