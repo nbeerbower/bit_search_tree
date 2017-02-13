@@ -1,7 +1,8 @@
 #include <stdbool.h>
 
-typedef struct node
-{
+#include "bit.h"
+
+typedef struct node {
 	char * id;
     void * data;
     long length;
@@ -14,10 +15,13 @@ node_t* bst_init();
 // new node
 node_t* bst_newNode(void *data, long length);
 // add to tree (returns id)
-char* bst_add(node_t *);
+char* bst_add(node_t *node);
 // delete from tree (returns successful)
 bool bst_delete(char *id);
 // search tree (returns array of related root node and children)
 node_t* bst_search(void *data, long length);
 // serialize tree (saves tree to file)
 // deserialize tree (loads tree from file)
+
+// add bit to hash
+char* bst_hashID(char *id, bit_t val);
