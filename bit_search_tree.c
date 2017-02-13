@@ -39,4 +39,4 @@ node_t* bst_search(void *data, long length) {
 char* bst_hashID(char *id, bit_t val) {
 	//
 	return id;
-}
+}	
