@@ -1,8 +1,10 @@
 #ifndef BIT_H
 #define BIT_H
-#define BITS_IN_BYTE 8
 
-typedef struct bit {
-    unsigned x:1;
-} bit_t;
+#include <stdint.h>
+
+typedef uint8_t byte_t;
+
+uint8_t bit_at(byte_t byte, uint8_t i);
+ 
 #endif

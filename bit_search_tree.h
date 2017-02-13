@@ -15,7 +15,7 @@ node_t* bst_init();
 // new node
 node_t* bst_newNode(void *data, long length);
 // add to tree (returns id)
-char* bst_add(node_t *node);
+char* bst_add(node_t* root, node_t *node);
 // delete from tree (returns successful)
 bool bst_delete(char *id);
 // search tree (returns array of related root node and children)
@@ -24,4 +24,4 @@ node_t* bst_search(void *data, long length);
 // deserialize tree (loads tree from file)
 
 // add bit to hash
-char* bst_hashID(char *id, bit_t val);
+char* bst_hashID(char *id, byte_t val, uint8_t i);

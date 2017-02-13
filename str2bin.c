@@ -13,8 +13,10 @@ int main(int argc, char *argv[]) {
 	
 	printf("%s\n", string);
 	
-	for (int i = 0; i < (strlen(string) * BITS_IN_BYTE); i++) {
-		printf("%i", ((bit_t *) string)[i].x ? 1 : 0);
+	for (int i = 0; i < strlen(string); i++) {
+		for (int j = 0; j < 8; j++) {
+			printf("%i", bit_at(((byte_t *) string)[i], j) ? 1 : 0);
+		}
 	}
 	printf("\n");
 	

@@ -13,7 +13,7 @@ CFLAGS += -std=c99 -D_DEFAULT_SOURCE
 
 ### File lists
 BINS = tree str2bin
-OBJS = bit_search_tree.o str2bin.o tree.o
+OBJS = bit_search_tree.o str2bin.o tree.o bit.o
 
 
 ### Phony targets all/clean
@@ -29,10 +29,9 @@ clean:
 
 # Be sure to link in the library
 #$(BINS): $(OBJS) $(LIBS)
-str2bin: str2bin.o
-tree: bit_search_tree.o tree.o
+str2bin: str2bin.o bit.o
+tree: bit_search_tree.o tree.o bit.o
 
 # Add header file dependencies
 bit_search_tree.o: bit_search_tree.h
-str2bin.o: bit.h
-tree.o: bit.h
+bit.o : bit.h

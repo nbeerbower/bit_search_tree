@@ -6,6 +6,7 @@
 
 node_t* bst_init() {
 	node_t *root = (node_t *) malloc(sizeof(node_t));
+	root->id = NULL;
 	root->data = NULL;
 	root->length = 0;
 	root->one = NULL;
@@ -15,6 +16,7 @@ node_t* bst_init() {
 
 node_t* bst_newNode(void *data, long length) {
 	node_t *node = (node_t *) malloc(sizeof(node_t));
+	node->id = NULL;
 	node->data = data;
 	node->length = length;
 	node->one = NULL;
@@ -22,8 +24,15 @@ node_t* bst_newNode(void *data, long length) {
 	return node;
 }
 
-char* bst_add(node_t *node) {
-	//
+char* bst_add(node_t* root, node_t *node) {
+	if (root == NULL) {
+		return NULL;
+	}
+	
+	if (root) {
+		//
+	}
+	
 	return NULL;
 }
 
@@ -36,7 +45,10 @@ node_t* bst_search(void *data, long length) {
 	return NULL;
 }
 
-char* bst_hashID(char *id, bit_t val) {
-	//
+char* bst_hashID(char *id, byte_t val, uint8_t i) {
+	if (id == NULL) {
+		return NULL; 
+	}
+	
 	return id;
 }	
