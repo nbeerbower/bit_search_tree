@@ -2,8 +2,13 @@
 
 #include "bit.h"
 
+typedef struct id {
+	byte_t *data;
+	long length;
+} bst_id;
+
 typedef struct node {
-	char * id;
+	bst_id * id;
     void * data;
     long length;
     struct node_t *zero;
@@ -20,13 +25,13 @@ void bst_destroyNode(node_t *node, bool recursive);
 // add to tree (returns id)
 char* bst_add(node_t* root, node_t *node);
 // delete from tree (returns successful)
-bool bst_delete(node_t* root, char *id);
+bool bst_delete(node_t* root, bst_id *id);
 // get node from tree by id
-node_t* bst_get(node_t* root, char* id);
+node_t* bst_get(node_t* root, bst_id* id);
 // search tree (returns array of related root node and children)
 node_t* bst_search(node_t* root, void *data, long length);
 // serialize tree (saves tree to file)
 // deserialize tree (loads tree from file)
 
 // add bit to hash
-char* bst_hashID(char *id, byte_t val, uint8_t i);
+bst_id* bst_hashID(bst_id *id, long i, uint8_t val);

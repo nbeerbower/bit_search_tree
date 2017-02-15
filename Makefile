@@ -33,5 +33,5 @@ str2bin: str2bin.o bit.o
 tree: bit_search_tree.o tree.o bit.o
 
 # Add header file dependencies
-bit_search_tree.o: bit_search_tree.h
+bit_search_tree.o: bit_search_tree.h bit.h
 bit.o : bit.h
