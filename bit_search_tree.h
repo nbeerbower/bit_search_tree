@@ -35,3 +35,5 @@ node_t* bst_search(node_t* root, void *data, long length);
 
 // add bit to hash
 bst_id* bst_hashID(bst_id *id, long i, uint8_t val);
+// convert id to string
+char* bst_id2str(bst_id *id);
